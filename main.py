@@ -31,8 +31,9 @@ USAGE:
         -l [length] (Optional): The length of the array to be sorted. Defaults to 5000.
         -r [repeats] (Optional): The number of times to repeat the algorithm. Defaults to 3.
         -d [delay] (Optional): The delay between each step of the algorithm, used to watch each individual step. Defaults to 0.
-        -w [width] (Optional): The width of the screen. Defaults to 800.
-        -h [height] (Optional): The height of the screen. Defaults to 600.
+        -width [width] (Optional): The width of the screen. Defaults to 800.
+        -height [height] (Optional): The height of the screen. Defaults to 600.
+        -h (Optional): Prints this message.
         -debug (Optional): Enables debug mode.
 
     Example: python main.py -t selection -l 10000 -r 6
@@ -141,11 +142,11 @@ if __name__ == "__main__": # If the file is being run directly (not imported as 
         algorithm_delay = int(sys.argv[sys.argv.index("-d") + 1]) # Set the delay between each algorithm step.
     
     # Check if the user has specified a width of the window.
-    if "-w" in sys.argv and sys.argv[sys.argv.index("-w") + 1].isdigit(): # Checks if flag exists and if value is a digit.
+    if "-width" in sys.argv and sys.argv[sys.argv.index("-w") + 1].isdigit(): # Checks if flag exists and if value is a digit.
         screen_width = int(sys.argv[sys.argv.index("-w") + 1]) # Set the width of the window.
     
     # Check if the user has specified a height of the window.
-    if "-h" in sys.argv and sys.argv[sys.argv.index("-h") + 1].isdigit(): # Checks if flag exists and if value is a digit.
+    if "-height" in sys.argv and sys.argv[sys.argv.index("-h") + 1].isdigit(): # Checks if flag exists and if value is a digit.
         screen_height = int(sys.argv[sys.argv.index("-h") + 1]) # Set the height of the window.
     
     # Check if the user has specified an algorithm to run.

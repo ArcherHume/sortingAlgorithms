@@ -28,7 +28,7 @@ USAGE:
 
     Flags:
         -t [algorithm] (Required): The algorithm you would like to run.
-            Choose from: selection, selection-r, bubble, quick
+            Choose from: selection, selection_recursive, bubble, quick_sort
         -l [length] (Optional): The length of the array to be sorted. Defaults to 5000.
         -r [repeats] (Optional): The number of times to repeat the algorithm. Defaults to 3.
         -d [delay] (Optional): The delay between each step of the algorithm, used to watch each individual step. Defaults to 0.
@@ -39,3 +39,9 @@ USAGE:
 
     Example: python main.py -t selection -l 10000 -r 6
 ```
+
+## How to add a new algorithm
+- Open the `modules/sorting_algorithms.py` file.
+- Create a function with a lowercase, underscore-separated name. Add the positional arguments `array` then `delay`.
+  - Example: `def selection_sort(sorting_array, delay)`
+- Any modifications/sorting done on the array will be reflected on screen.

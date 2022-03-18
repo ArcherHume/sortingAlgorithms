@@ -11,6 +11,15 @@ import math
 import pygame
 
 
+__author__ = "Archer Hume"
+__copyright__ = "Copyright (C) 2022 Archer Hume"
+__license__ = "MIT"
+__version__ = "1.0.0"
+__maintainer__ = "Archer Hume"
+__email__ = "archer@hume.email"
+__status__ = "Development"
+
+
 class Window:
     """Window class to handle all UI related methods"""
     

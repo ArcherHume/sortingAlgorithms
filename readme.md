@@ -1,5 +1,5 @@
 # sortingAlgorithms
-A collection of sorting algorithms written in Python.
+A collection of sorting algorithms written in Python. An educational tool used for demonstrations of said algorithms.
 
 
 ## Current Algorithms

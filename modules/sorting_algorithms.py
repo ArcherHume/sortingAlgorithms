@@ -147,3 +147,50 @@ def quick_sort(sorting_array, delay):
     # Start the recursive sort function.
     _quickSort(sorting_array, 0, len(sorting_array) - 1)
 
+
+@algorithm_wrapper
+def insertion(sorting_array, delay):
+    """ Insertion sort algorithm. """
+    STORED_LENGTH = len(sorting_array)
+    for array_index in range(1,STORED_LENGTH):
+        key = sorting_array[array_index]
+        temp_index = array_index - 1
+        while temp_index >= 0 and sorting_array[temp_index] > key:
+            sorting_array[temp_index + 1] = sorting_array[temp_index]
+            temp_index -= 1
+        sorting_array[temp_index + 1] = key
+
+@algorithm_wrapper
+def shell(sorting_array, delay):
+    """ Shell sort algorithm. """
+    STORED_LENGTH = len(sorting_array)
+    gap = STORED_LENGTH // 2
+    while gap > 0:
+        for array_index in range(gap, STORED_LENGTH):
+            key = sorting_array[array_index]
+            temp_index = array_index - gap
+            while temp_index >= 0 and sorting_array[temp_index] > key:
+                sorting_array[temp_index + gap] = sorting_array[temp_index]
+                temp_index -= gap
+            sorting_array[temp_index + gap] = key
+            # Sleep for specified delay.
+            if delay: time.sleep(delay)
+        gap //= 2
+
+@algorithm_wrapper
+def comb(sorting_array, delay):
+    """ Comb sort algorithm. """
+    STORED_LENGTH = len(sorting_array)
+    gap = STORED_LENGTH
+    shrink = 1.3
+    while gap > 1:
+        gap = int(gap / shrink)
+        for array_index in range(gap, STORED_LENGTH):
+            key = sorting_array[array_index]
+            temp_index = array_index - gap
+            while temp_index >= 0 and sorting_array[temp_index] > key:
+                sorting_array[temp_index + gap] = sorting_array[temp_index]
+                temp_index -= gap
+            sorting_array[temp_index + gap] = key
+            # Sleep for specified delay.
+            if delay: time.sleep(delay)

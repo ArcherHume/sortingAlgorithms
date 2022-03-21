@@ -75,10 +75,16 @@ if __name__ == "__main__": # If the file is being run directly (not imported as 
     
     # Check if the user has specified an algorithm to run.
     if len(sys.argv) > 1 and "-t" in sys.argv: # Checks if flag exists.
-        # Initialise the new window.
-        display_window = window_engine.Window(screen_width, screen_height, ALGORITHM_ENGINE_OBJECT) 
-        # run the algorithm.
-        ALGORITHM_ENGINE_OBJECT.start(sys.argv[sys.argv.index("-t") + 1])
+        # Check if algorithm in flag exists.
+        if sys.argv[sys.argv.index("-t") + 1] in ALGORITHM_ENGINE_OBJECT._algorithm_types.keys():
+            # Initialise the new window.
+            display_window = window_engine.Window(screen_width, screen_height, ALGORITHM_ENGINE_OBJECT) 
+            # run the algorithm.
+            ALGORITHM_ENGINE_OBJECT.start(sys.argv[sys.argv.index("-t") + 1])
+        else:
+            print(f"ERROR: The algorithm '{sys.argv[sys.argv.index('-t') + 1]}' does not exist.")
+            print(__help__)
+            sys.exit()
     elif "-h" in sys.argv: # Checks if help flag exists.
         # If no algorithm is specified or the -h flag is used, print __help__ and exit.
         print("No algorithm specified.")

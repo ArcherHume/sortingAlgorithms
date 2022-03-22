@@ -7,6 +7,9 @@ A collection of sorting algorithms written in Python. An educational tool used f
 - [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
 - [Selection Sort (Recursion)](https://en.wikipedia.org/wiki/Selection_sort)
 - [Quick Sort](https://en.wikipedia.org/wiki/Quicksort)
+- [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort)
+- [Shell sort](https://en.wikipedia.org/wiki/Shellsort)
+- [Comb Sort](https://en.wikipedia.org/wiki/Comb_sort)
   
 
 ## Quick Start

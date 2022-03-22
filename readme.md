@@ -31,7 +31,7 @@ USAGE:
 
     Flags:
         -t [algorithm] (Required): The algorithm you would like to run.
-            Choose from: selection, selection_recursive, bubble, quick_sort
+            Choose from: selection, selection_recursive, bubble, quick_sort, insertion, shell, comb.
         -l [length] (Optional): The length of the array to be sorted. Defaults to 5000.
         -r [repeats] (Optional): The number of times to repeat the algorithm. Defaults to 3.
         -d [delay] (Optional): The delay between each step of the algorithm, used to watch each individual step. Defaults to 0.

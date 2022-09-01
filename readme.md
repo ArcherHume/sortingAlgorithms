@@ -1,8 +1,11 @@
 # sortingAlgorithms
+
 A collection of sorting algorithms written in Python. An educational tool used for demonstrations of said algorithms.
 
+![](https://i.imgur.com/mVybEng.png)
 
 ## Current Algorithms
+
 - [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
 - [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
 - [Selection Sort (Recursion)](https://en.wikipedia.org/wiki/Selection_sort)
@@ -10,21 +13,22 @@ A collection of sorting algorithms written in Python. An educational tool used f
 - [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort)
 - [Shell sort](https://en.wikipedia.org/wiki/Shellsort)
 - [Comb Sort](https://en.wikipedia.org/wiki/Comb_sort)
-  
 
 ## Quick Start
- - Clone Repository:
-    ```
-    git clone https://github.com/0xFuji/sortingAlgorithms.git
-    cd sortingAlgorithms
-    ```
- - Install Dependencies:
-    ```
-    pip install -r requirements.txt
-    ```
- - Run Script: [Usage](#usage)
+
+- Clone Repository:
+  ```
+  git clone https://github.com/0xFuji/sortingAlgorithms.git
+  cd sortingAlgorithms
+  ```
+- Install Dependencies:
+  ```
+  pip install -r requirements.txt
+  ```
+- Run Script: [Usage](#usage)
 
 ## Usage
+
 ```
 USAGE:
     python main.py -t [algorithm]
@@ -44,6 +48,7 @@ USAGE:
 ```
 
 ## How to add a new algorithm
+
 - Open the `modules/sorting_algorithms.py` file.
 - Create a function with a lowercase, underscore-separated name. Add the positional arguments `array` then `delay`.
   - Example: `def selection_sort(sorting_array, delay)`

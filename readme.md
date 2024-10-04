@@ -18,7 +18,7 @@ A collection of sorting algorithms written in Python. An educational tool used f
 
 - Clone Repository:
   ```
-  git clone https://github.com/0xFuji/sortingAlgorithms.git
+  git clone https://github.com/ArcherHume/sortingAlgorithms.git
   cd sortingAlgorithms
   ```
 - Install Dependencies:

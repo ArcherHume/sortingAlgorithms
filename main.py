@@ -34,9 +34,9 @@ USAGE:
     Flags:
         -t [algorithm] (Required): The algorithm you would like to run.
             Choose from: {', '.join(ALGORITHM_ENGINE_OBJECT._algorithm_types.keys())}
-        -l [length] (Optional): The length of the array to be sorted. Defaults to 5000.
+        -l [length] (Optional): The length of the array to be sorted. Defaults to 50.
         -r [repeats] (Optional): The number of times to repeat the algorithm. Defaults to 3.
-        -d [delay] (Optional): The delay between each step of the algorithm, used to watch each individual step. Defaults to 0.
+        -d [delay] (Optional): The delay in milliseconds between each step of the algorithm, used to watch each individual step. Defaults to 100.
         -width [width] (Optional): The width of the screen. Defaults to 800.
         -height [height] (Optional): The height of the screen. Defaults to 600.
         -h (Optional): Prints this message.

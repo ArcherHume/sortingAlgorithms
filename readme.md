@@ -18,13 +18,16 @@ A collection of sorting algorithms written in Python. An educational tool used f
 
 - Clone Repository:
   ```
-  git clone https://github.com/ArcherHume/sortingAlgorithms.git
+  git clone https://github.com/ArcherHume/sortingAlgorithms
   cd sortingAlgorithms
   ```
-- Install Dependencies:
+- Install Python Dependencies:
+  If using Poetry or UV, you can skip this step, as `uv run main.py` will get all you need.
   ```
   pip install -r requirements.txt
   ```
+  You do need to have the SDL2 multimedia library installed and a version 
+  of Python >= 3.3 before running the above
 - Run Script: [Usage](#usage)
 
 ## Usage

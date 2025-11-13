@@ -25,7 +25,7 @@ __email__ = "archer@hume.email"
 __status__ = "Development"
 
 
-sys.setcheckinterval(1) # Set the interpreter check interval to 1 (Higher thread switching frequency increases delay accuracy).
+sys.setswitchinterval(1) # Set the interpreter check interval to 1 (Higher thread switching frequency increases delay accuracy).
 
 
 class AlgorithmExistanceError(Exception):
@@ -38,14 +38,14 @@ class AlgorithmExistanceError(Exception):
 class Algorithm:
     """Algorithm class that handles all backend processing and sorting for the script."""
     
-    def __init__(self, length=5000, repeats=3, delay=0, debug=False) -> None:
+    def __init__(self, length=50, repeats=3, delay=100, debug=False) -> None:
         """Initialize the algorithm class.
 
         Args:
             length (int): The length of the array to be sorted.
             algorithm (str): The algorithm to be run.
-            repeats (int, optional): Amount of times algorithm will repeat. Defaults to 3.
-            delay (int, optional): The delay between algorithm steps. Defaults to 0.
+            repeats (int, optional): Amount of times algorithm will repeat. 
+            delay (int, optional): The delay in milliseconds between algorithm steps. 
 
         Raises:
             AlgorithmExistanceError: When the algorithm does not exist.
@@ -86,7 +86,7 @@ class Algorithm:
             self._running = True # Sets the algorithm to running.
             self._start_time = time.time() # Sets the start time of the algorithm.
             self._display_name = " ".join([word.capitalize() for word in func.__name__.split("_")]) # Sets the display name of the algorithm.
-            func(self._sorting_array, self._algorithm_delay) # Run the algorithm.
+            func(self._sorting_array, self._algorithm_delay/1000) # Run the algorithm.
             self._finished_times.append(time.time() - self._start_time) # Add the time taken to the finished times list.
             self._running = False # Set the algorithm to not running.
         return _wrapper
